@@ -7,17 +7,128 @@
     <meta name="theme-color" content="#f5c200" />
     <meta name="description" content="Tech Toast - টেক টোস্ট | Toast Up Your Tech Life" />
     <title>Tech Toast - টেক টোস্ট</title>
-    <!-- React and Babel CDN to run App.jsx directly -->
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet" />
     <style>
-      body { margin: 0; background: #0a0a0a; color: #f0f0f0; }
+      body { font-family: 'Barlow Condensed', 'Impact', sans-serif; background: #0a0a0a; color: #f0f0f0; }
     </style>
   </head>
   <body>
-    <div id="root"></div>
-    <!-- Load your App.jsx file dynamically -->
-    <script type="text/babel" src="./App.jsx"></script>
+    <!-- NAV -->
+    <nav class="sticky top-0 z-50 bg-[#0a0a0a]/95 border-b-2 border-[#f5c200] flex items-center justify-between px-8 py-3 backdrop-blur-md">
+      <div class="flex items-center gap-3">
+        <img src="./logo.jpg" alt="Tech Toast" class="h-11 w-11 object-cover rounded-lg" />
+        <span class="text-xl font-black tracking-wider text-white">TECH TOAST</span>
+      </div>
+      <div class="hidden md:flex gap-1 items-center">
+        <a href="#home" class="text-[#f5c200] font-bold text-sm px-4 py-2 uppercase tracking-widest border-b-2 border-[#f5c200]">Home</a>
+        <a href="#about" class="text-gray-400 hover:text-[#f5c200] font-bold text-sm px-4 py-2 uppercase tracking-widest transition-all">About</a>
+        <a href="#products" class="text-gray-400 hover:text-[#f5c200] font-bold text-sm px-4 py-2 uppercase tracking-widest transition-all">Shop</a>
+        <a href="#gallery" class="text-gray-400 hover:text-[#f5c200] font-bold text-sm px-4 py-2 uppercase tracking-widest transition-all">Gallery</a>
+        <a href="#faq" class="text-gray-400 hover:text-[#f5c200] font-bold text-sm px-4 py-2 uppercase tracking-widest transition-all">FAQ</a>
+        <a href="#contact" class="text-gray-400 hover:text-[#f5c200] font-bold text-sm px-4 py-2 uppercase tracking-widest transition-all">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="relative min-h-[90vh] flex flex-col items-center justify-center text-center p-8 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_60%,rgba(245,120,0,0.12)_0%,transparent_70%)] pointer-events-none"></div>
+      <img src="./logo.jpg" alt="Tech Toast Logo" class="w-36 h-36 object-cover rounded-2xl mb-6 border-3 border-[#f5c200]/30 shadow-[0_0_60px_rgba(245,194,0,0.3)]" />
+      <h1 class="text-5xl md:text-8xl font-black leading-none tracking-wider text-white drop-shadow-[0_0_40px_rgba(245,194,0,0.4)] mb-1">TECH TOAST</h1>
+      <div class="text-xl md:text-2xl text-[#f5c200] mb-4">টেক টোস্ট</div>
+      <div class="text-base md:text-xl text-[#f5c200] font-bold tracking-widest uppercase mb-4">Toast Up Your Tech Life</div>
+      <p class="text-sm md:text-base text-gray-400 max-w-lg mb-8 italic">Premium earbuds, headphones & more — engineered for the bold.</p>
+      <a href="#products" class="bg-[#f5c200] text-black px-10 py-3.5 text-lg font-black tracking-widest rounded uppercase shadow-[0_4px_30px_rgba(245,194,0,0.4)] transition-transform hover:scale-105 inline-block">Shop Now</a>
+    </section>
+
+    <div class="h-[2px] bg-gradient-to-r from-transparent via-[#f5c200]/30 to-transparent mx-8"></div>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 px-8 max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-black tracking-wider uppercase text-white mb-2">About Tech Toast</h2>
+      <div class="w-16 h-1 bg-[#f5c200] mb-10 rounded"></div>
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <p class="text-lg text-gray-300 leading-relaxed italic">
+          Tech Toast — টেক টোস্ট — is your go-to destination for premium audio and electronics. We bring you the hottest tech gear at unbeatable prices. From crystal-clear earbuds to immersive headphones, we toast up your tech life every single day.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-[#f5c200]/10 border border-[#f5c200]/25 rounded-lg p-4 text-center font-bold text-[#f5c200] tracking-widest uppercase">Top Brands</div>
+          <div class="bg-[#f5c200]/10 border border-[#f5c200]/25 rounded-lg p-4 text-center font-bold text-[#f5c200] tracking-widest uppercase">Best Prices</div>
+          <div class="bg-[#f5c200]/10 border border-[#f5c200]/25 rounded-lg p-4 text-center font-bold text-[#f5c200] tracking-widest uppercase">Fast Delivery</div>
+          <div class="bg-[#f5c200]/10 border border-[#f5c200]/25 rounded-lg p-4 text-center font-bold text-[#f5c200] tracking-widest uppercase">Trusted Quality</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-[2px] bg-gradient-to-r from-transparent via-[#f5c200]/30 to-transparent mx-8"></div>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="py-20 px-8 max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-black tracking-wider uppercase text-white mb-2">Our Products</h2>
+      <div class="w-16 h-1 bg-[#f5c200] mb-10 rounded"></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- P1 -->
+        <div class="bg-black/40 border border-[#f5c200]/15 rounded-xl p-6 relative transition-all hover:border-[#f5c200]/50 hover:-translate-y-1">
+          <span class="absolute top-3 right-3 bg-[#f5c200] text-black text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">Best Seller</span>
+          <h3 class="text-xl font-black text-white mt-2 mb-1">ProBass Earbuds X1</h3>
+          <p class="text-xs text-gray-500 mb-4 italic">40hr battery · Active Noise Cancellation · IPX5</p>
+          <div class="text-xl font-black text-[#f5c200] mb-4">৳ 1,299</div>
+          <a href="https://wa.me/8801410018220?text=Hi!%20I%20want%20to%20order:%20ProBass%20Earbuds%20X1" target="_blank" class="inline-block bg-[#25d366] text-white px-4 py-2 rounded font-extrabold text-sm tracking-wide">💬 Order on WhatsApp</a>
+        </div>
+        <!-- P2 -->
+        <div class="bg-black/40 border border-[#f5c200]/15 rounded-xl p-6 relative transition-all hover:border-[#f5c200]/50 hover:-translate-y-1">
+          <span class="absolute top-3 right-3 bg-[#e87040] text-black text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">Premium</span>
+          <h3 class="text-xl font-black text-white mt-2 mb-1">FireAudio Over-Ear Pro</h3>
+          <p class="text-xs text-gray-500 mb-4 italic">Hi-Fi Sound · Foldable · Plush Ear Cushions</p>
+          <div class="text-xl font-black text-[#f5c200] mb-4">৳ 3,499</div>
+          <a href="https://wa.me/8801410018220?text=Hi!%20I%20want%20to%20order:%20FireAudio%20Over-Ear%20Pro" target="_blank" class="inline-block bg-[#25d366] text-white px-4 py-2 rounded font-extrabold text-sm tracking-wide">💬 Order on WhatsApp</a>
+        </div>
+        <!-- P3 -->
+        <div class="bg-black/40 border border-[#f5c200]/15 rounded-xl p-6 relative transition-all hover:border-[#f5c200]/50 hover:-translate-y-1">
+          <span class="absolute top-3 right-3 bg-[#50e8a0] text-black text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">Budget Pick</span>
+          <h3 class="text-xl font-black text-white mt-2 mb-1">ToastBuds Lite</h3>
+          <p class="text-xs text-gray-500 mb-4 italic">True Wireless · 20hr total · Touch Controls</p>
+          <div class="text-xl font-black text-[#f5c200] mb-4">৳ 699</div>
+          <a href="https://wa.me/8801410018220?text=Hi!%20I%20want%20to%20order:%20ToastBuds%20Lite" target="_blank" class="inline-block bg-[#25d366] text-white px-4 py-2 rounded font-extrabold text-sm tracking-wide">💬 Order on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-[2px] bg-gradient-to-r from-transparent via-[#f5c200]/30 to-transparent mx-8"></div>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="py-20 px-8 max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-black tracking-wider uppercase text-white mb-2">Gallery</h2>
+      <div class="w-16 h-1 bg-[#f5c200] mb-10 rounded"></div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="bg-gradient-to-br from-[#1a1a1a] to-[#2a1800] border border-[#f5c200]/15 rounded-lg aspect-[4/3] flex flex-col items-center justify-center p-4">
+          <div class="text-3xl mb-1">🎧</div>
+          <div class="text-sm font-bold text-[#f5c200] text-center uppercase">New Drop</div>
+        </div>
+        <div class="bg-gradient-to-br from-[#0d0d0d] to-[#1a1000] border border-[#f5c200]/15 rounded-lg aspect-[4/3] flex flex-col items-center justify-center p-4">
+          <div class="text-3xl mb-1">🔊</div>
+          <div class="text-sm font-bold text-[#f5c200] text-center uppercase">ProBass Series</div>
+        </div>
+        <div class="bg-gradient-to-br from-[#1a0800] to-[#2a1a00] border border-[#f5c200]/15 rounded-lg aspect-[4/3] flex flex-col items-center justify-center p-4">
+          <div class="text-3xl mb-1">📦</div>
+          <div class="text-sm font-bold text-[#f5c200] text-center uppercase">Unboxing</div>
+        </div>
+        <div class="bg-gradient-to-br from-[#0a0a0a] to-[#1a1500] border border-[#f5c200]/15 rounded-lg aspect-[4/3] flex flex-col items-center justify-center p-4">
+          <div class="text-3xl mb-1">🎙️</div>
+          <div class="text-sm font-bold text-[#f5c200] text-center uppercase">Studio Grade</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-[#f5c200]/25 py-8 text-center text-gray-500 text-sm mt-12 bg-black/50">
+      <div class="text-base font-black text-[#f5c200] mb-1 tracking-widest">TECH TOAST — টেক টোস্ট</div>
+      <div class="mb-4">Toast Up Your Tech Life 🔥</div>
+      <div class="flex justify-center gap-4 mb-4">
+        <a href="https://wa.me/8801410018220" target="_blank" class="bg-[#25d366] text-white px-4 py-1.5 rounded-lg font-bold text-xs uppercase text-none">💬 WhatsApp</a>
+      </div>
+      <div>&copy; 2026 Tech Toast. All rights reserved.</div>
+    </footer>
   </body>
 </html>
