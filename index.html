@@ -2,14 +2,22 @@
 <html lang="bn">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/logo.jpg" />
+    <link rel="icon" href="./logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f5c200" />
     <meta name="description" content="Tech Toast - টেক টোস্ট | Toast Up Your Tech Life" />
     <title>Tech Toast - টেক টোস্ট</title>
+    <!-- React and Babel CDN to run App.jsx directly -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body { margin: 0; background: #0a0a0a; color: #f0f0f0; }
+    </style>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!-- Load your App.jsx file dynamically -->
+    <script type="text/babel" src="./App.jsx"></script>
   </body>
 </html>
